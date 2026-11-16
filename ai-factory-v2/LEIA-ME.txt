@@ -1,0 +1,10 @@
+AI FACTORY OS V2 — INSTALAÇÃO
+1. Exporte o backup JSON da V1 antes de migrar.
+2. Extraia este ZIP e suba o conteúdo da pasta ai-factory-v2 na raiz de um novo repositório privado no GitHub.
+3. No Render, crie um Web Service Node conectado ao repositório. Build Command: npm install. Start Command: npm start. Health Check Path: /health.
+4. Em Environment > Add Environment Variable, inclua ADMIN_PASSWORD (senha forte, única, mínimo 12 caracteres), OPENAI_API_KEY (sua chave API), OPENAI_MODEL (opcional: gpt-4.1-mini). Não use Add File. Não publique chaves no GitHub.
+5. Faça deploy. Abra a URL HTTPS do serviço. Usuário: admin. Senha: a definida por você.
+6. Em Configurações importe o backup da V1. Os dados continuam locais ao navegador, sem sincronização.
+7. Em Gerador de produtos ou Páginas comerciais, preencha o formulário, clique Preparar briefing e depois Gerar com IA. Copie, salve ou baixe o conteúdo.
+API: requer cobrança/créditos próprios na OpenAI Platform. A assinatura ChatGPT não inclui os créditos API. O limite de 20 solicitações/hora é local ao processo e reinicia com o servidor; não é um teto absoluto de gastos. Configure limites e alertas de consumo no provedor. Revise saídas antes de vender. Não envie dados pessoais ou confidenciais.
+Teste local: Node 22+, copie .env.example para .env, preencha as variáveis e rode node --env-file=.env server.mjs. Abra http://localhost:3000. Em produção use HTTPS. A autenticação básica é para uso administrativo individual, não para clientes. Não há pagamentos, geração de imagens, usuários individuais ou automações reais nesta versão.
